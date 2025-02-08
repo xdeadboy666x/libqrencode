@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: run vcpkg
-      uses: lukka/run-vcpkg@v3
+      uses: lukka/run-vcpkg@v11
       with:
           vcpkgArguments: getopt:x64-windows libiconv:x64-windows libpng:x64-windows
           vcpkgDirectory: '${{ github.workspace }}/vcpkg'
