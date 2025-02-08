@@ -6,6 +6,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [win64, win32]
 
     steps:
     - uses: actions/checkout@v4
