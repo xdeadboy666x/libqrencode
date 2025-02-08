@@ -20,7 +20,7 @@ jobs:
     - name: make distcheck
       run: make distcheck
     - name: Archive build artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: qrencode-build
         path: |
