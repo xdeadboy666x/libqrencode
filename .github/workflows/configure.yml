@@ -15,7 +15,7 @@ jobs:
     - name: generate configure script
       run: ./autogen.sh
     - name: configure "--prefix=$mingw_w64_x86_64_prefix --cross-prefix=$cross_prefix"
-      run: sudo apt update && sudo apt-get install -y autoconf automake autotools-dev libtool pkg-config libpng-dev && ./configure --with-tests
+      run: sudo apt update && sudo apt-get install -y autoconf automake autotools-dev libsdl2-dev libtool pkg-config libpng-dev && ./configure --with-tests
     - name: make
       run: make
     - name: make check
