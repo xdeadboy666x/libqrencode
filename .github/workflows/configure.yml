@@ -12,10 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Dependencies
+      run: sudo apt update && sudo apt-get install -y autoconf automake autotools-dev libsdl2-dev libtool pkg-config libpng-dev &&
     - name: generate configure script
       run: ./autogen.sh
     - name: configure
-      run: sudo apt update && sudo apt-get install -y autoconf automake autotools-dev libsdl2-dev libtool pkg-config libpng-dev && ./configure --with-tests
+      run:  ./configure --with-tests
     - name: make
       run: make
     - name: make check
@@ -27,6 +29,7 @@ jobs:
       with:
         name: qrencode-build
         path: |
+          ./*.c
           ./*.o
           ./*.a
           ./*.so
