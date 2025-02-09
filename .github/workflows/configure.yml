@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Dependencies
-      run: sudo apt update && sudo apt-get install -y autoconf automake autotools-dev libsdl2-dev libtool pkg-config libpng-dev &&
+      run: sudo apt update && sudo apt-get install -y autoconf automake autotools-dev libsdl2-dev libtool pkg-config libpng-dev
     - name: generate configure script
       run: ./autogen.sh
     - name: configure
