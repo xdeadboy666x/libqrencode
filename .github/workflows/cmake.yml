@@ -18,7 +18,7 @@ jobs:
         os: [win64]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     
     - name: Dependencies
       run: sudo apt update && sudo apt-get install -y autoconf automake autotools-dev libsdl2-dev libtool pkg-config libpng-dev
